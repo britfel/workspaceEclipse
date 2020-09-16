@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 
 public class Prova {
 	public static void main(String[] args) {
-		//Scanner teclado = new Scanner(System.in);
+		
 
 		Questões lista[];
 		lista = new Questões[5];
@@ -17,22 +17,18 @@ public class Prova {
 		lista[4] = new Questões("Quem descobriu o Brasa?", "PA Cabral");
 
 		for (Questões q : lista) {
-
-			//System.out.println(q.apresentarQuestao());
-			// vou ler a resposta do usuario
-			//resp = teclado.nextLine();
-			
+					
 			resp = JOptionPane.showInputDialog(q.apresentarQuestao());
 			resultado = q.corrigir(resp);
 			if (resultado) {
 				JOptionPane.showMessageDialog(null,"ACERTOU!");
-				//System.out.println("ACERTOU - parabéns");
+				
 			} else {
 				JOptionPane.showMessageDialog(null, "ERROU");
-				//System.out.println("ERRRROOOOUUUWWW - Lembre do Faustão falando...");
+				
 			}
 
 		}
-		//teclado.close();
+	
 	}
 }
